@@ -6,6 +6,7 @@
 
 # print(arjit.salary , arjit.age)
 
+#----------------------------------------------------------------------------------------
 
 # class Employee :
 #     salary = 12000      # it is class attribute
@@ -18,7 +19,7 @@
 
 # print(harsh.name, harsh.salary, harsh.experience)   #preference always given to intsance attribute
 
-
+#---------------------------------------------------------------------------------------
 
 # class Employee:
 #     salary = 12000      # it is class attribute
@@ -29,6 +30,9 @@
 
 # harry = Employee()
 # Employee.function1(harry)
+
+
+#------------------------------------------------------------------------------------------
 
 
 # class Employee:
@@ -52,21 +56,40 @@
 # harry = Employee()
 # Employee.function1(harry)
 
-class Employee:
-    salary = 12000      # it is class attribute
-    experience = 13
-    age=30
+#----------------------------------------------------------------------------------------
+
+# class Employee:
+#     salary = 12000      # it is class attribute
+#     experience = 13
+#     age=30
 
 
 
-    def __init__(self, sal, ex, ag):
-       self.salary = sal
-       self.age = ag
-       self.experience = ex
-       print(f"age is {self.age}, salary is {self.salary}, experience is {self.experience}")
+#     def __init__(self, sal, ex, ag):
+#        self.salary = sal
+#        self.age = ag
+#        self.experience = ex
+#        print(f"age is {self.age}, salary is {self.salary}, experience is {self.experience}")
 
-harry = Employee(1500,2,20)   
-print(harry.salary, harry.age)
+# harry = Employee(1500,2,20)   
+# print(harry.salary, harry.age)
+
+#---------------------------------------------------------------------------------------
+
+# whenever we have to intake values in a class use dunder method
+
+class calculator:
+    def __init__(self,x,y):
+        self.x = x
+        self.y =y
+
+    def sum(self):
+        print(f"sum is {self.x + self.y}")
+
+cal = calculator(3,7)
+
+calculator.sum(cal)
+
 
 
 
