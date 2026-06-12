@@ -66,7 +66,7 @@ class decorators():
     def fullname(self, name):            # it took the new name and changed the value of first_name, last_name 
         first_name= name.split(" ")[0]
         last_name = name.split(" ")[1]
-        
+
         self.firstname = first_name
         self.lastname = last_name
 
@@ -81,4 +81,5 @@ class decorators():
 x = decorators("arjit","verma")
 
 x.fullname = "Raja Ram"
-print(x.email)    
+print(x.email)
+d    
