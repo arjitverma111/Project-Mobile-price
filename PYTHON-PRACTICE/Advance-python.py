@@ -82,14 +82,66 @@
 #        # # index is 6, item is 18
 
 # #------------------------------------------------------------------------------------------------------------
-# # List comprehension
+# # List comprehension  --- used replace append function
 
-l1 = [10,15,12,23,26,28,18]
-l2 = []
-# for i in l1:
-#    l2.append(i*i)
+# l1 = [10,15,12,23,26,28,18]
+# l2 = []
+# # for i in l1:
+# #    l2.append(i*i)
 
-l2 = [i*i for i in l1]
-print(l2)
+# l2 = [i*i for i in l1]
+# print(l2)
 
+
+# #---------------------------------------------------------------------------------
+
+# # Lambda function  ---  <name of fxn> = lambda <input> : <output>
+
+## def square(n):
+##     return(n*n)
+
+## instead we can use lamda function
+
+# square= lambda n :  (n*n)
+
+# print(square(5))
+
+# #---------------------------------------------------------------------------------
+
+## format method
+
+# ({} and {} are really good boys).format("arjit", "sanchit")
+
+# #---------------------------------------------------------------------------------
+
+# # MAP - applies the fucntion to all the elements in a list
+
+l = [1,12,3,5,151,252,26]
+
+square = lambda n : n*n
+
+l2 = map(square,l )
+
+
+print(list(l2))
+
+# # Filter -- removes those elements from the list which returns false
+
+def even(n):
+    if(n%2)==0:
+        return True
+    return False
+
+l3 = filter(even,l)
+
+
+print(list(l3))
+
+# # Reduce -- Sequential computation
+from functools import reduce
+
+def sum(a,b):
+    return a+b
+
+print(reduce(sum, l))
 
