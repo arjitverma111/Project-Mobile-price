@@ -82,4 +82,3 @@ x = decorators("arjit","verma")
 
 x.fullname = "Raja Ram"
 print(x.email)
-d    

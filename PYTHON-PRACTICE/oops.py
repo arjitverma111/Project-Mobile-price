@@ -71,7 +71,7 @@
 #        self.experience = ex
 #        print(f"age is {self.age}, salary is {self.salary}, experience is {self.experience}")
 
-# harry = Employee(1500,2,20)   
+# harry = Employee(1500,2,20)   # IT WILL PRINT 1500,2,20 - WE KINDA PROVIDED A INSTANCE ATTRIBUTE
 # print(harry.salary, harry.age)
 
 #---------------------------------------------------------------------------------------

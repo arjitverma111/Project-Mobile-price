@@ -61,7 +61,7 @@
 
 # class manager(programmer):
 #     def __init__(self):
-#         super().__init__()                    #get constructer of programmer
+#         super().__init__()                    #get constructer of programmer     # THIS WAY IT WILL PRINT T
         
 #         print("constructor of manager")
 
