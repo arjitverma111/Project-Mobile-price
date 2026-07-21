@@ -2,9 +2,17 @@ import joblib
 import pandas as pd
 import streamlit as st
 
-# Load the saved model
-model = joblib.load(r"C:\Users\neetu\OneDrive\Desktop\github\Project-Mobile-Price\mobile_price_model.joblib")
+import os
 
+
+# # Load the model relative to this script's location — works on any machine/server
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# model = joblib.load(os.path.join(BASE_DIR, "mobile_price_model.joblib"))
+
+
+# Load the saved model
+
+model = joblib.load(r"C:\Users\neetu\OneDrive\Desktop\github\mobile_price_model.joblib")
 
 PRICE_LABELS = {
     0: "🟢 Low Cost (Under ₹12,000)",
