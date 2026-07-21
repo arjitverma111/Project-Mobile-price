@@ -2,7 +2,7 @@
 
 A machine learning web app that predicts a mobile phone's price category based on its hardware specifications. Trained on 8 different algorithms using GridSearchCV to find the best-performing model.
 
-🔗 **[Live Demo →](https://arjit-verma.streamlit.app/mobile-price-predictor)**
+🔗 **[Live Demo →](https://project-mobile-price.streamlit.app/)**
 
 ---
 
@@ -10,10 +10,10 @@ A machine learning web app that predicts a mobile phone's price category based o
 
 | Metric | Score |
 |---|---|
-| Training Accuracy | 98% |
-| Test Accuracy | 96% |
+| Training Accuracy | 96.88% |
+| Test Accuracy | 98.60% |
 | Cross-Validation | 5-Fold |
-| Best Model | XGBoost / Random Forest |
+| Best Model | LogisticRegression(C=10, max_iter=5000, penalty='l1',random_state=42, solver='saga')|
 
 ---
 
@@ -32,14 +32,14 @@ A machine learning web app that predicts a mobile phone's price category based o
 
 GridSearchCV was used to compare 8 classifiers with hyperparameter tuning:
 
-- Logistic Regression (L1, L2, ElasticNet)
-- K-Nearest Neighbours
-- Decision Tree
-- Random Forest
-- Ridge Classifier
-- AdaBoost
-- Gradient Boosting
-- **XGBoost** ← best performer
+- **LogisticRegression** (L1, L2, ElasticNet) ← best performer
+- KNeighborsClassifier
+- DecisionTreeClassifier
+- RandomForestClassifier
+- RidgeClassifier
+- AdaBoostClassifier
+- GradientBoostingClassifier
+- XGBClassifier
 
 ---
 
@@ -66,38 +66,39 @@ GridSearchCV was used to compare 8 classifiers with hyperparameter tuning:
 
 ---
 
-## 🗂 Project Structure
+## 📂 Project Structure
 
-```
-mobile-price-predictor/
-├── data/
-│   ├── train.csv              # Training dataset
-│   └── test.csv               # Test dataset
-├── train.py                   # Model training + GridSearchCV
-├── app.py                     # Streamlit web app
-├── mobile_price_model.joblib  # Saved best model
-├── requirements.txt
-└── README.md
-```
+​```
+project-mobile-price/
+├── app.py                      # Streamlit web app
+├── mobile_price_model.joblib   # Saved trained model
+├── requirements.txt            # Python dependencies
+├── README.md
+└── extra files/                # Notebooks & data used during development
+    ├── cleaning-EDA.ipynb      # Data cleaning & exploratory analysis
+    ├── Model.ipynb             # Model training + evaluation
+    ├── train.csv                # Training dataset
+    ├── test.csv                 # Test dataset
+    └── test_cleaned.csv         # Cleaned test dataset
+​```
 
 ---
 
 ## ⚡ Quickstart
 
-```bash
+​```bash
 # 1. Clone the repo
-git clone https://github.com/Arjit-Verma/mobile-price-predictor
-cd mobile-price-predictor
+git clone https://github.com/arjitverma111/Project-Mobile-price
+cd project-mobile-price
 
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Train the model
-python train.py
-
-# 4. Run the app
+# 3. Run the app
 streamlit run app.py
-```
+​```
+> 💡 The trained model (`mobile_price_model.joblib`) is already included, so you can run the app right away.
+> If you'd like to retrain it yourself, open `extra files/Model.ipynb` in Jupyter and run all cells.
 
 ---
 
@@ -107,7 +108,7 @@ streamlit run app.py
 |---|---|
 | Python | Core language |
 | scikit-learn | ML models + Pipeline + GridSearchCV |
-| XGBoost | Best performing classifier |
+| LogisticRegression | Best performing classifier |
 | Pandas / NumPy | Data processing |
 | Matplotlib | Visualisation |
 | Streamlit | Web interface |
@@ -128,7 +129,7 @@ streamlit run app.py
 **Arjit Verma** — BTech CSE @ GGSIPU (2025–2029)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Arjit--Verma-black?logo=github)](https://github.com/arjitverma111)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](www.linkedin.com/in/111-arjit-verma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/111-arjit-verma)
 
 ---
 
