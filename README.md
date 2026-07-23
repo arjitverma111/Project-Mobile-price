@@ -15,6 +15,9 @@ A machine learning web app that predicts a mobile phone's price category based o
 | Cross-Validation | 5-Fold |
 | Best Model | LogisticRegression(C=10, max_iter=5000, penalty='l1',random_state=42, solver='saga')|
 
+### Confusion Matrix
+![Confusion Matrix](confusion_matrix.png)
+
 ---
 
 ## 🏷 Price Categories
